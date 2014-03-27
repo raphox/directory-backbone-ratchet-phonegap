@@ -39,6 +39,12 @@ $(window).bind(orientationEvent , function() {
 	}
 });
 
+$('input:not([type=button], [type=checkox], [type=radio], [type=image], [type=submit], [type=reset])').bind(orientationEvent , function() {
+	if(isTablet){
+		setTimeout(doneResizing, 500);
+	}
+});
+
 function doneResizing() {
     var container = $('.content');
     var windowsWidth = $(window).width();
