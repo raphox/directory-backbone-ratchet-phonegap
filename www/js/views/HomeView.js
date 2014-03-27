@@ -13,7 +13,10 @@ app.views.HomeView = Backbone.View.extend({
 
     events: {
         "keyup .search-key":    "search",
-        "keypress .search-key": "onkeypress"
+        "keypress .search-key": "onkeypress",
+        "focusout .search-key": function () {
+            setTimeout(doneResizing, 250);
+        }
     },
 
     search: function (event) {
