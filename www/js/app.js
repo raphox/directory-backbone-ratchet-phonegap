@@ -40,6 +40,12 @@ $(window).bind(orientationEvent , function() {
 });
 
 function doneResizing() {
-    var container = document.querySelector('.content');
-    container.offsetWidth;
+    var container = $('.content');
+    var windowsWidth = $(window).width();
+        windowsHeight = $(window).height();
+
+    container.width(windowsWidth);
+    container.height(windowsHeight);
+
+    console.log('resize');
 }
